@@ -1,0 +1,2 @@
+server contains your server-only library code. It can be imported by using the $lib/server alias. SvelteKit will prevent you from importing these in client code.
+(https://kit.svelte.dev/docs/server-only-modules)
