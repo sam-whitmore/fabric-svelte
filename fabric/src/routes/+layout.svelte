@@ -10,6 +10,4 @@
 	setupConvex(PUBLIC_CONVEX_URL);
 </script>
 
-
-
 {@render children()}

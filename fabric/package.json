@@ -18,10 +18,12 @@
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@types/eslint": "^8.56.7",
 		"autoprefixer": "^10.4.19",
+		"clerk-sveltekit": "^0.4.2",
 		"eslint": "^9.0.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
 		"globals": "^15.0.0",
+		"lucia": "^3.2.0",
 		"postcss": "^8.4.39",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
@@ -36,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@clerk/clerk-js": "^5.7.2",
 		"convex": "^1.13.0",
 		"convex-svelte": "^0.0.9"
 	}
