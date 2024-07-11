@@ -38,7 +38,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@auth/core": "^0.34.1",
 		"@clerk/clerk-js": "^5.7.2",
+		"@convex-dev/auth": "^0.0.34",
 		"convex": "^1.13.0",
 		"convex-svelte": "^0.0.9"
 	}

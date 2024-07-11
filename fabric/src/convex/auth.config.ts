@@ -1,8 +1,8 @@
 export default {
   providers: [
     {
-      domain: "https://grateful-primate-37.clerk.accounts.dev",
+      domain: process.env.PUBLIC_CONVEX_URL,
       applicationID: "convex",
     },
-  ]
+  ],
 };

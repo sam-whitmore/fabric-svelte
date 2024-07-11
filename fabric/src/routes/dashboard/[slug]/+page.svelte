@@ -1,1 +1,0 @@
-<h1>Sam's Dashboard</h1>

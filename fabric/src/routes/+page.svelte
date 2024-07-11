@@ -1,12 +1,21 @@
 <script lang="ts">
   import { fail, redirect } from '@sveltejs/kit'
+  import { useConvexClient } from 'convex-svelte'
+  import { api } from '../convex/_generated/api.js';
+
+  const client = useConvexClient()
 
   let quant = $state(5000)
   let qual = $state('')
   let increased = $state(true)
 
-  function handleSubmit(quant: number, qual: string) {
-
+  function onSubmit(e: SubmitEvent) {
+    client.mutation(api.responses.add, {
+      qual,
+      quant,
+      user: "Sam"
+    })
+    console.log("added")
     // redirect(303, '/dashboard')
   }
 
@@ -35,7 +44,7 @@
   if (quant > 10000) return quant = 10000
 }} />
 
-<form id="fabric-survey" class="relative w-screen h-screen" method="POST" action="?/response">
+<form id="fabric-survey" class="relative w-screen h-screen" onsubmit={onSubmit}>
   <label form="fabric-survey" for="qual-textbox" class="fixed mx-auto top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 text-3xl">How are you?</label>
   <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-sky-400 bg-sky-100">
     <input form="fabric-survey" name="quant" id="quant-slider" class="mx-auto hidden" type="range" min="0" max="10000" bind:value={quant}>
