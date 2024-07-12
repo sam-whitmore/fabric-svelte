@@ -3,7 +3,6 @@
   import { useConvexClient } from 'convex-svelte'
   import { api } from '../convex/_generated/api.js';
   import { PUBLIC_LATITUDE, PUBLIC_LONGITUDE } from '$env/static/public';
-  import { getWeatherInformationFromCoordinates } from '$lib/api/weather.js'
 
   const latitude = PUBLIC_LATITUDE
   const longitude = PUBLIC_LONGITUDE
@@ -14,17 +13,17 @@
   let qual = $state('')
   let increased = $state(true)
 
-  function onSubmit(e: SubmitEvent) {
+  async function onSubmit(e: SubmitEvent) {
     e.preventDefault()
-    getWeatherInformationFromCoordinates(latitude as number, longitude as number)
     client.mutation(api.responses.add, {
       user: "Sam",
       qual,
-      quant
+      quant,
+      latitude,
+      longitude
     })
     goto(`/dashboard`)
   }
-
 </script>
 
 <svelte:window onwheel={(e) => {
