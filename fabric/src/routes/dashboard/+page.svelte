@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { useQuery } from 'convex-svelte';
 	import { api } from '../../convex/_generated/api.js';
-
+  import * as d3 from 'd3';
+  import { Chart, Svg, Axis, Highlight, Labels, Points, Tooltip, TooltipItem  } from 'layerchart'
+  import { type Response } from '$lib/models/responses.js'
 	const query = useQuery(api.responses.get, {});
 
 </script>
@@ -20,3 +22,13 @@
 		{/each}
 	</ul>
 {/if}
+
+<div>
+  <Chart>
+    <Svg>
+      <Axis placement="left" />
+      <Axis placement="bottom" />
+      <Points />
+    </Svg>
+  </Chart>
+</div>

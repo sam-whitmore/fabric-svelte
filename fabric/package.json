@@ -16,9 +16,12 @@
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@types/d3-array": "^3.2.1",
 		"@types/eslint": "^8.56.7",
 		"autoprefixer": "^10.4.19",
 		"clerk-sveltekit": "^0.4.2",
+    "d3": "^7.9.0",
+		"d3-array": "^3.2.4",
 		"eslint": "^9.0.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
@@ -42,6 +45,8 @@
 		"@clerk/clerk-js": "^5.7.2",
 		"@convex-dev/auth": "^0.0.34",
 		"convex": "^1.13.0",
-		"convex-svelte": "^0.0.9"
+		"convex-svelte": "^0.0.9",
+		"d3": "^7.9.0",
+		"layerchart": "^0.43.7"
 	}
 }

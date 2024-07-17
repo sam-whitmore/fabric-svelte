@@ -1,0 +1,32 @@
+export interface Response {
+  _creationTime: number;
+  _id: string;
+  carbonMonoxide_m3: number;
+  cloudCover_percent: number;
+  country: string;
+  datetime: string;
+  dewPoint_C: number;
+  gb_defra_index: number;
+  gust_kph: number;
+  heatIndex_C: number;
+  humidity_percent: number;
+  isDay: number;
+  latitude: string;
+  longitude: string;
+  nitrogenDioxide_m3: number;
+  ozone_m3: number;
+  particulateMatter10_m3: number;
+  particulateMatter2_5_m3: number;
+  qual: string;
+  quant: number;
+  region: string;
+  sulphurDioxide_m3: number;
+  tempFeelsLike_C: number;
+  temp_C: number;
+  us_epa_index: number;
+  user: string;
+  weather: string;
+  windChill_C: number;
+  windDir: string;
+  wind_kph: number;
+}
